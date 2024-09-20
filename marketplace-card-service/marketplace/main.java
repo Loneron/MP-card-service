@@ -33,15 +33,15 @@ public class main {
                 150.0)
         );
 
-        // Получение всех продуктов
-        System.out.println("All products:");
-        controller.getAllProducts().forEach(product -> System.out.println((product.getName() + " " + "Price: " + product.getPrice())));
-        controller.getAllProducts().forEach(product -> System.out.println(product.getDescription()));
 
-        // Получение продукта по ID
-        Product product = controller.getProductById(1L);
-        System.out.println("Received product: " + product.getName());
-        System.out.println("Price: " + product.getPrice());
-        System.out.println("Product description : " + product.getDescription());
+        System.out.println("All products:");  // вывод всех продуктов
+        controller.getAllProducts().forEach(product -> System.out.println((product.getName() + " " + "Price: " + product.getPrice())));
+        // вывод наименования и цены продуктов
+        controller.getAllProducts().forEach(product -> System.out.println(product.getDescription()));  // вывод описания, хар-ик
+
+        Product product = controller.getProductById(1L);  // вывод продукта по id
+        System.out.println("Received product: " + product.getName());  // Наименование продукта
+        System.out.println("Price: " + product.getPrice());  // Цена продукта
+        System.out.println("Product description : " + product.getDescription()); // описание, хар-ки продукта и прочая херь
     }
 }
